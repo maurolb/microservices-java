@@ -6,7 +6,7 @@ server:
   # DB
   # ===============================
   datasource:
-    url: jdbc:mysql://localhost:3306/invoice?useSSL=false&
+    url: jdbc:mysql://localhost:3306/invoice?useSSL=false&allowPublicKeyRetrieval=true
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
     password: asd123
