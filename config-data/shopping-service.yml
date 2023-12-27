@@ -31,11 +31,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
-Feign:
-  resilience4j:
-    enabled: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"

@@ -3,6 +3,7 @@ package mauro.shopping.shopping.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
+import mauro.shopping.shopping.models.Product;
 
 @Data
 @Entity
@@ -21,6 +22,9 @@ public class InvoiceItem {
 
     @Transient
     private Double subtotal;
+
+    @Transient
+    private Product product;
 
     public Double getSubTotal(){
         if(this.price >0 && this.quantity >0){
