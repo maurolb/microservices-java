@@ -8,20 +8,23 @@ eureka:
 
 spring:
   cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
     gateway:
       discovery:
         locator:
           enabled: true
       routes:
         - id: customer-service
-          uri: lb://customer-service
+          uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path=/customers/**
         - id: product-service
-          uri: lb://product-service
+          uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/products/**
         - id: shopping-service
-          uri: lb://shopping-service
+          uri: lb://SHOPPING-SERVICE
           predicates:
             - Path=/invoices/**
