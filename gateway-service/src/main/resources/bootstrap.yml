@@ -6,6 +6,3 @@ spring:
       uri: http://localhost:8081
       username: root
       password: s3cr3t
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
